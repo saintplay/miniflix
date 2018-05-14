@@ -8,7 +8,7 @@
         :key="movie._id"
         class="column"
       >
-        <img src="cloudinaryInstance.url(movie.banner)" class="banner" @click="$emit('choose-movie', movie)">
+        <img :src="cloudinaryInstance.url(movie.banner)" class="banner" @click="$emit('choose-movie', movie)">
       </div>
     </div>
   </div>  

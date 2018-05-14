@@ -49,12 +49,11 @@ export default {
   },
   created() {
     this.cloudinaryInstance = window.cloudinary.Cloudinary.new({
-      cloud_name: 'saintplay',
+      cloud_name: 'saintlplay',
       secure: true
     })
     axios.get(MINIFLIX_URL)
     .then(res => {
-      console.log(res)
       this.movies = res.data      
     })
   },
@@ -68,6 +67,7 @@ export default {
 
 <style lang="scss">
 #app {
+ min-height: 100vh;
  font-family: 'Avenir', Helvetica, Arial, sans-serif;
  -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
