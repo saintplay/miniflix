@@ -10,9 +10,9 @@ const MovieSchema = new mongoose.Schema({
 
 module.exports = {
   connectDisconnect: (req, res, next) => {
-    mongoose.createConnection(req.webtaskContext.secrets.MONGO_URL)
+    const connection = mongoose.createConnection(req.webtaskContext.secrets.MONGO_URL)
     
-    req.movieModal = mongoose.connection.model('Movie', MovieSchema)
+    req.movieModal = connection.model('Movie', MovieSchema)
     req.on('end', () => {
       mongoose.connection.close()
     })

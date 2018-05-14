@@ -25,7 +25,7 @@ app.get('/movies', (req, res) => {
   req.movieModal
   .find({})
   .sort({ created_at: -1 })
-  res.json()
+  .exec((err, movies) => res.json(movies))
 })
 
 module.exports = Webtask.fromExpress(app)
