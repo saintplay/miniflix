@@ -11,6 +11,9 @@
 
 ***
 
+## Demo
+<https://saintplay-miniflix.now.sh/>
+
 ## Features
 
 - Watch trailers Netflix style
@@ -18,3 +21,4 @@
 - Cloudinary video hosting
 - Webtask Server
 - Mongodb hosted in mLab
+- Static Deployment in Zeit Now 
